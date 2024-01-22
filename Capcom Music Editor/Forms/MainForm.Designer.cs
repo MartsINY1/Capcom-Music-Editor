@@ -60,6 +60,7 @@
             this.readSongToTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showAdvancedColumnsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usePianoKeysForNotesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mapKeysToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tmsAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.txtSongName = new System.Windows.Forms.TextBox();
             this.gbxConsoleSelection = new System.Windows.Forms.GroupBox();
@@ -108,7 +109,7 @@
             this.lblSongRAM_Address.Location = new System.Drawing.Point(15, 134);
             this.lblSongRAM_Address.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSongRAM_Address.Name = "lblSongRAM_Address";
-            this.lblSongRAM_Address.Size = new System.Drawing.Size(141, 17);
+            this.lblSongRAM_Address.Size = new System.Drawing.Size(134, 16);
             this.lblSongRAM_Address.TabIndex = 20;
             this.lblSongRAM_Address.Text = "RAM Address (Song)";
             // 
@@ -118,7 +119,7 @@
             this.lblFirstPointer.Location = new System.Drawing.Point(16, 80);
             this.lblFirstPointer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFirstPointer.Name = "lblFirstPointer";
-            this.lblFirstPointer.Size = new System.Drawing.Size(74, 17);
+            this.lblFirstPointer.Size = new System.Drawing.Size(71, 16);
             this.lblFirstPointer.TabIndex = 19;
             this.lblFirstPointer.Text = "RAM Bank";
             // 
@@ -128,7 +129,7 @@
             this.lblROM_Bank.Location = new System.Drawing.Point(15, 107);
             this.lblROM_Bank.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblROM_Bank.Name = "lblROM_Bank";
-            this.lblROM_Bank.Size = new System.Drawing.Size(129, 17);
+            this.lblROM_Bank.Size = new System.Drawing.Size(119, 16);
             this.lblROM_Bank.TabIndex = 18;
             this.lblROM_Bank.Text = "ROM Starting Point";
             // 
@@ -252,7 +253,7 @@
             this.rdBreakSheet.Location = new System.Drawing.Point(13, 111);
             this.rdBreakSheet.Margin = new System.Windows.Forms.Padding(4);
             this.rdBreakSheet.Name = "rdBreakSheet";
-            this.rdBreakSheet.Size = new System.Drawing.Size(107, 21);
+            this.rdBreakSheet.Size = new System.Drawing.Size(102, 20);
             this.rdBreakSheet.TabIndex = 2;
             this.rdBreakSheet.Text = "Break Sheet";
             this.rdBreakSheet.UseVisualStyleBackColor = true;
@@ -264,7 +265,7 @@
             this.rdLoopSheet.Location = new System.Drawing.Point(13, 69);
             this.rdLoopSheet.Margin = new System.Windows.Forms.Padding(4);
             this.rdLoopSheet.Name = "rdLoopSheet";
-            this.rdLoopSheet.Size = new System.Drawing.Size(102, 21);
+            this.rdLoopSheet.Size = new System.Drawing.Size(97, 20);
             this.rdLoopSheet.TabIndex = 1;
             this.rdLoopSheet.Text = "Loop Sheet";
             this.rdLoopSheet.UseVisualStyleBackColor = true;
@@ -277,7 +278,7 @@
             this.rdMusicSheet.Location = new System.Drawing.Point(13, 27);
             this.rdMusicSheet.Margin = new System.Windows.Forms.Padding(4);
             this.rdMusicSheet.Name = "rdMusicSheet";
-            this.rdMusicSheet.Size = new System.Drawing.Size(106, 21);
+            this.rdMusicSheet.Size = new System.Drawing.Size(101, 20);
             this.rdMusicSheet.TabIndex = 0;
             this.rdMusicSheet.TabStop = true;
             this.rdMusicSheet.Text = "Music Sheet";
@@ -304,7 +305,6 @@
             this.tmsAbout});
             this.menDebug.Location = new System.Drawing.Point(0, 0);
             this.menDebug.Name = "menDebug";
-            this.menDebug.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
             this.menDebug.Size = new System.Drawing.Size(1924, 28);
             this.menDebug.TabIndex = 37;
             this.menDebug.Text = "menuStrip1";
@@ -317,35 +317,35 @@
             this.tsmWriteConnectToggleInMusicSheet,
             this.tmsDoNotWriteChannelEnd});
             this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
-            this.debugToolStripMenuItem.Size = new System.Drawing.Size(66, 24);
+            this.debugToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
             this.debugToolStripMenuItem.Text = "&Debug";
             this.debugToolStripMenuItem.Click += new System.EventHandler(this.DebugToolStripMenuItem_Click);
             // 
             // tsmKeepInstructionsOrder
             // 
             this.tsmKeepInstructionsOrder.Name = "tsmKeepInstructionsOrder";
-            this.tsmKeepInstructionsOrder.Size = new System.Drawing.Size(446, 26);
+            this.tsmKeepInstructionsOrder.Size = new System.Drawing.Size(454, 26);
             this.tsmKeepInstructionsOrder.Text = "&Keep Instructions Order";
             this.tsmKeepInstructionsOrder.Click += new System.EventHandler(this.TsmKeepInstructionsOrder_Click);
             // 
             // tsmEnsureJumpedOnInstructionsAreAloneOnTheirLine
             // 
             this.tsmEnsureJumpedOnInstructionsAreAloneOnTheirLine.Name = "tsmEnsureJumpedOnInstructionsAreAloneOnTheirLine";
-            this.tsmEnsureJumpedOnInstructionsAreAloneOnTheirLine.Size = new System.Drawing.Size(446, 26);
+            this.tsmEnsureJumpedOnInstructionsAreAloneOnTheirLine.Size = new System.Drawing.Size(454, 26);
             this.tsmEnsureJumpedOnInstructionsAreAloneOnTheirLine.Text = "&Ensure Jumped On Instructions Are Alone On Their Line";
             this.tsmEnsureJumpedOnInstructionsAreAloneOnTheirLine.Click += new System.EventHandler(this.TsmEnsureJumpedOnInstructionsAreAloneOnTheirLine_Click);
             // 
             // tsmWriteConnectToggleInMusicSheet
             // 
             this.tsmWriteConnectToggleInMusicSheet.Name = "tsmWriteConnectToggleInMusicSheet";
-            this.tsmWriteConnectToggleInMusicSheet.Size = new System.Drawing.Size(446, 26);
+            this.tsmWriteConnectToggleInMusicSheet.Size = new System.Drawing.Size(454, 26);
             this.tsmWriteConnectToggleInMusicSheet.Text = "&Write Connect Toggles In Music Sheet";
             this.tsmWriteConnectToggleInMusicSheet.Click += new System.EventHandler(this.TsmWriteConnectToggleInMusicSheet_Click);
             // 
             // tmsDoNotWriteChannelEnd
             // 
             this.tmsDoNotWriteChannelEnd.Name = "tmsDoNotWriteChannelEnd";
-            this.tmsDoNotWriteChannelEnd.Size = new System.Drawing.Size(446, 26);
+            this.tmsDoNotWriteChannelEnd.Size = new System.Drawing.Size(454, 26);
             this.tmsDoNotWriteChannelEnd.Text = "&Do Not Write Channel End";
             this.tmsDoNotWriteChannelEnd.Click += new System.EventHandler(this.TmsDoNotWriteChannelEnd_Click);
             // 
@@ -354,36 +354,44 @@
             this.tsmAdvanced.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.readSongToTextToolStripMenuItem,
             this.showAdvancedColumnsToolStripMenuItem,
-            this.usePianoKeysForNotesToolStripMenuItem});
+            this.usePianoKeysForNotesToolStripMenuItem,
+            this.mapKeysToolStripMenuItem});
             this.tsmAdvanced.Name = "tsmAdvanced";
-            this.tsmAdvanced.Size = new System.Drawing.Size(87, 24);
+            this.tsmAdvanced.Size = new System.Drawing.Size(89, 24);
             this.tsmAdvanced.Text = "&Advanced";
             // 
             // readSongToTextToolStripMenuItem
             // 
             this.readSongToTextToolStripMenuItem.Name = "readSongToTextToolStripMenuItem";
-            this.readSongToTextToolStripMenuItem.Size = new System.Drawing.Size(251, 26);
+            this.readSongToTextToolStripMenuItem.Size = new System.Drawing.Size(259, 26);
             this.readSongToTextToolStripMenuItem.Text = "&Read Song - To Text";
             this.readSongToTextToolStripMenuItem.Click += new System.EventHandler(this.ReadSongToTextToolStripMenuItem_Click);
             // 
             // showAdvancedColumnsToolStripMenuItem
             // 
             this.showAdvancedColumnsToolStripMenuItem.Name = "showAdvancedColumnsToolStripMenuItem";
-            this.showAdvancedColumnsToolStripMenuItem.Size = new System.Drawing.Size(251, 26);
+            this.showAdvancedColumnsToolStripMenuItem.Size = new System.Drawing.Size(259, 26);
             this.showAdvancedColumnsToolStripMenuItem.Text = "&Show Advanced Columns";
             this.showAdvancedColumnsToolStripMenuItem.Click += new System.EventHandler(this.ShowAdvancedColumnsToolStripMenuItem_Click);
             // 
             // usePianoKeysForNotesToolStripMenuItem
             // 
             this.usePianoKeysForNotesToolStripMenuItem.Name = "usePianoKeysForNotesToolStripMenuItem";
-            this.usePianoKeysForNotesToolStripMenuItem.Size = new System.Drawing.Size(251, 26);
+            this.usePianoKeysForNotesToolStripMenuItem.Size = new System.Drawing.Size(259, 26);
             this.usePianoKeysForNotesToolStripMenuItem.Text = "&Use Piano Keys for notes";
             this.usePianoKeysForNotesToolStripMenuItem.Click += new System.EventHandler(this.UsePianoKeysForNotesToolStripMenuItem_Click);
+            // 
+            // mapKeysToolStripMenuItem
+            // 
+            this.mapKeysToolStripMenuItem.Name = "mapKeysToolStripMenuItem";
+            this.mapKeysToolStripMenuItem.Size = new System.Drawing.Size(259, 26);
+            this.mapKeysToolStripMenuItem.Text = "&Map Keys";
+            this.mapKeysToolStripMenuItem.Click += new System.EventHandler(this.MapKeysToolStripMenuItem_Click);
             // 
             // tmsAbout
             // 
             this.tmsAbout.Name = "tmsAbout";
-            this.tmsAbout.Size = new System.Drawing.Size(62, 24);
+            this.tmsAbout.Size = new System.Drawing.Size(64, 24);
             this.tmsAbout.Text = "A&bout";
             this.tmsAbout.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
@@ -414,7 +422,7 @@
             this.rdSnes.Location = new System.Drawing.Point(13, 69);
             this.rdSnes.Margin = new System.Windows.Forms.Padding(4);
             this.rdSnes.Name = "rdSnes";
-            this.rdSnes.Size = new System.Drawing.Size(61, 21);
+            this.rdSnes.Size = new System.Drawing.Size(59, 20);
             this.rdSnes.TabIndex = 1;
             this.rdSnes.Text = "Snes";
             this.rdSnes.UseVisualStyleBackColor = true;
@@ -426,7 +434,7 @@
             this.rdNes.Location = new System.Drawing.Point(13, 27);
             this.rdNes.Margin = new System.Windows.Forms.Padding(4);
             this.rdNes.Name = "rdNes";
-            this.rdNes.Size = new System.Drawing.Size(54, 21);
+            this.rdNes.Size = new System.Drawing.Size(53, 20);
             this.rdNes.TabIndex = 0;
             this.rdNes.Text = "Nes";
             this.rdNes.UseVisualStyleBackColor = true;
@@ -438,7 +446,7 @@
             this.lblNameOfSongForTextFileExportation.Location = new System.Drawing.Point(588, 85);
             this.lblNameOfSongForTextFileExportation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNameOfSongForTextFileExportation.Name = "lblNameOfSongForTextFileExportation";
-            this.lblNameOfSongForTextFileExportation.Size = new System.Drawing.Size(96, 17);
+            this.lblNameOfSongForTextFileExportation.Size = new System.Drawing.Size(91, 16);
             this.lblNameOfSongForTextFileExportation.TabIndex = 43;
             this.lblNameOfSongForTextFileExportation.Text = "Name of song";
             // 
@@ -448,7 +456,7 @@
             this.lblNameOfSongForTextFileExportation_Warning.Location = new System.Drawing.Point(588, 107);
             this.lblNameOfSongForTextFileExportation_Warning.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNameOfSongForTextFileExportation_Warning.Name = "lblNameOfSongForTextFileExportation_Warning";
-            this.lblNameOfSongForTextFileExportation_Warning.Size = new System.Drawing.Size(222, 17);
+            this.lblNameOfSongForTextFileExportation_Warning.Size = new System.Drawing.Size(203, 16);
             this.lblNameOfSongForTextFileExportation_Warning.TabIndex = 44;
             this.lblNameOfSongForTextFileExportation_Warning.Text = "(only used for text file exportation)";
             // 
@@ -457,7 +465,7 @@
             this.lblStatus.AutoSize = true;
             this.lblStatus.Location = new System.Drawing.Point(1016, 317);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(0, 17);
+            this.lblStatus.Size = new System.Drawing.Size(0, 16);
             this.lblStatus.TabIndex = 46;
             this.lblStatus.Visible = false;
             // 
@@ -467,7 +475,7 @@
             this.lblFirstByteRead.Location = new System.Drawing.Point(324, 134);
             this.lblFirstByteRead.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFirstByteRead.Name = "lblFirstByteRead";
-            this.lblFirstByteRead.Size = new System.Drawing.Size(105, 17);
+            this.lblFirstByteRead.Size = new System.Drawing.Size(99, 16);
             this.lblFirstByteRead.TabIndex = 49;
             this.lblFirstByteRead.Text = "First Byte Read";
             // 
@@ -494,12 +502,12 @@
             this.lblSnesMemoryLoadPointer.Location = new System.Drawing.Point(15, 161);
             this.lblSnesMemoryLoadPointer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSnesMemoryLoadPointer.Name = "lblSnesMemoryLoadPointer";
-            this.lblSnesMemoryLoadPointer.Size = new System.Drawing.Size(143, 17);
+            this.lblSnesMemoryLoadPointer.Size = new System.Drawing.Size(135, 16);
             this.lblSnesMemoryLoadPointer.TabIndex = 51;
             this.lblSnesMemoryLoadPointer.Text = "Memory Load Pointer";
             this.lblSnesMemoryLoadPointer.Visible = false;
             // 
-            // frmMain
+            // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -530,7 +538,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menDebug;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frmMain";
+            this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Capcom Music Editor";
             this.Shown += new System.EventHandler(this.FrmMain_Shown);
@@ -593,6 +601,7 @@
         private System.Windows.Forms.TextBox txtFirstByteRead;
         private System.Windows.Forms.TextBox txtSnesMemoryLoadPointer;
         private System.Windows.Forms.Label lblSnesMemoryLoadPointer;
+        private System.Windows.Forms.ToolStripMenuItem mapKeysToolStripMenuItem;
     }
 }
 

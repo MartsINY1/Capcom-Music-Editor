@@ -64,6 +64,7 @@
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
     <Compile Include="Reusable\HexFileWriter.cs" />
+    <Compile Include="Reusable\KeysMapped.cs" />
     <Compile Include="Unique\ChannelInstructionsToHex.cs" />
     <Compile Include="Unique\FormObjects\DataGridViewsHandler.cs" />
     <Compile Include="Unique\GetMusicEngineNotesDatas.cs" />

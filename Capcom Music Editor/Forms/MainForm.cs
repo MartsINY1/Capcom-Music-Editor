@@ -429,6 +429,53 @@ namespace Mega_Music_Editor
             }
         }
 
+
+        private void FillKeyMappedValues()
+        {
+            KeysMapped.AddMappedKey(Keys.Enter.ToString());
+            KeysMapped.AddMappedKey(Keys.Delete.ToString());
+            KeysMapped.AddMappedKey(Keys.Insert.ToString());
+            KeysMapped.AddMappedKey(Keys.Space.ToString());
+            KeysMapped.AddMappedKey(Keys.Oem7.ToString());
+            KeysMapped.AddMappedKey(Keys.OemMinus.ToString());
+            KeysMapped.AddMappedKey(Keys.D0.ToString());
+            KeysMapped.AddMappedKey(Keys.D1.ToString());
+            KeysMapped.AddMappedKey(Keys.D2.ToString());
+            KeysMapped.AddMappedKey(Keys.D3.ToString());
+            KeysMapped.AddMappedKey(Keys.D4.ToString());
+            KeysMapped.AddMappedKey(Keys.D5.ToString());
+            KeysMapped.AddMappedKey(Keys.D6.ToString());
+            KeysMapped.AddMappedKey(Keys.D7.ToString());
+            KeysMapped.AddMappedKey(Keys.D8.ToString());
+            KeysMapped.AddMappedKey(Keys.D9.ToString());
+            KeysMapped.AddMappedKey(Keys.A.ToString());
+            KeysMapped.AddMappedKey(Keys.B.ToString());
+            KeysMapped.AddMappedKey(Keys.C.ToString());
+            KeysMapped.AddMappedKey(Keys.D.ToString());
+            KeysMapped.AddMappedKey(Keys.E.ToString());
+            KeysMapped.AddMappedKey(Keys.F.ToString());
+            KeysMapped.AddMappedKey(Keys.G.ToString());
+            KeysMapped.AddMappedKey(Keys.H.ToString());
+            KeysMapped.AddMappedKey(Keys.I.ToString());
+            KeysMapped.AddMappedKey(Keys.J.ToString());
+            KeysMapped.AddMappedKey(Keys.K.ToString());
+            KeysMapped.AddMappedKey(Keys.L.ToString());
+            KeysMapped.AddMappedKey(Keys.M.ToString());
+            KeysMapped.AddMappedKey(Keys.N.ToString());
+            KeysMapped.AddMappedKey(Keys.O.ToString());
+            KeysMapped.AddMappedKey(Keys.P.ToString());
+            KeysMapped.AddMappedKey(Keys.Q.ToString());
+            KeysMapped.AddMappedKey(Keys.R.ToString());
+            KeysMapped.AddMappedKey(Keys.S.ToString());
+            KeysMapped.AddMappedKey(Keys.T.ToString());
+            KeysMapped.AddMappedKey(Keys.U.ToString());
+            KeysMapped.AddMappedKey(Keys.V.ToString());
+            KeysMapped.AddMappedKey(Keys.W.ToString());
+            KeysMapped.AddMappedKey(Keys.X.ToString());
+            KeysMapped.AddMappedKey(Keys.Y.ToString());
+            KeysMapped.AddMappedKey(Keys.Z.ToString());
+        }
+
         private void FrmMain_Shown(object sender, EventArgs e)
         {
             string defaultLoadingFilePath = Application.StartupPath; // File that indicate information of automatic loading
@@ -436,6 +483,9 @@ namespace Mega_Music_Editor
             string currentLoadingFilePath = ""; // Path from default txt file
             StreamReader defaultLoadingFileStreamReader = null;
             GameType gameType = GameType.NesA;
+
+            FillKeyMappedValues();
+            KeysMapped.ReadKeysMappedFromFile();
 
             // Create a datagridview object, gameType will be changed later if needed
             dataGridViewsHandler = new DataGridViewsHandler(this, GameType.NesA, ref gbxSheetSelection, ref gbxConsoleSelection);
@@ -1278,6 +1328,11 @@ namespace Mega_Music_Editor
             dataGridViewsHandler.SetUsePianoKeysForNotes(usePianoKeysForNotes);
         }
 
+        private void mapKeysToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void RdNes_CheckedChanged(object sender, EventArgs e)
         {
             if (rdNes.Checked == true && dataGridViewsHandler.GetGameType() != GameType.NesA)
@@ -1342,6 +1397,11 @@ namespace Mega_Music_Editor
             Form frmAbout = new FrmAbout();
 
             frmAbout.ShowDialog();
+        }
+
+        private void MapKeysToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            KeysMapped.ShowEditForm();
         }
     }
 

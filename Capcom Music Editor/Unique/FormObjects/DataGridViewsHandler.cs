@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using Mega_Music_Editor.Unique.MusicSheetsInstructionsDatas;
 using Mega_Music_Editor.Reusable;
+using static System.Runtime.CompilerServices.RuntimeHelpers;
 
 namespace Mega_Music_Editor.Unique
 {
@@ -1333,174 +1334,140 @@ namespace Mega_Music_Editor.Unique
 
         private string ReturnNumberPressed(KeyEventArgs e)
         {
+            string keyCode = e.KeyCode.ToString();
             string letterPressed = "";
 
-            switch (e.KeyCode)
+            if (keyCode == KeysMapped.GetEditedValueByOriginalValue(Keys.D0.ToString()))
             {
-                case Keys.D0:
-                    {
-                        letterPressed = "0";
-                        break;
-                    }
-                case Keys.D1:
-                    {
-                        letterPressed = "1";
-                        break;
-                    }
-                case Keys.D2:
-                    {
-                        letterPressed = "2";
-                        break;
-                    }
-                case Keys.D3:
-                    {
-                        letterPressed = "3";
-                        break;
-                    }
-                case Keys.D4:
-                    {
-                        letterPressed = "4";
-                        break;
-                    }
-                case Keys.D5:
-                    {
-                        letterPressed = "5";
-                        break;
-                    }
-                case Keys.D6:
-                    {
-                        letterPressed = "6";
-                        break;
-                    }
-                case Keys.D7:
-                    {
-                        letterPressed = "7";
-                        break;
-                    }
-                case Keys.D8:
-                    {
-                        letterPressed = "8";
-                        break;
-                    }
-                case Keys.D9:
-                    {
-                        letterPressed = "9";
-                        break;
-                    }
+                letterPressed = "0";
+            }
+            else if (keyCode == KeysMapped.GetEditedValueByOriginalValue(Keys.D1.ToString()))
+            {
+                letterPressed = "1";
+            }
+            else if (keyCode == KeysMapped.GetEditedValueByOriginalValue(Keys.D2.ToString()))
+            {
+                letterPressed = "2";
+            }
+            else if (keyCode == KeysMapped.GetEditedValueByOriginalValue(Keys.D3.ToString()))
+            {
+                letterPressed = "3";
+            }
+            else if (keyCode == KeysMapped.GetEditedValueByOriginalValue(Keys.D4.ToString()))
+            {
+                letterPressed = "4";
+            }
+            else if (keyCode == KeysMapped.GetEditedValueByOriginalValue(Keys.D5.ToString()))
+            {
+                letterPressed = "5";
+            }
+            else if (keyCode == KeysMapped.GetEditedValueByOriginalValue(Keys.D6.ToString()))
+            {
+                letterPressed = "6";
+            }
+            else if (keyCode == KeysMapped.GetEditedValueByOriginalValue(Keys.D7.ToString()))
+            {
+                letterPressed = "7";
+            }
+            else if (keyCode == KeysMapped.GetEditedValueByOriginalValue(Keys.D8.ToString()))
+            {
+                letterPressed = "8";
+            }
+            else if (keyCode == KeysMapped.GetEditedValueByOriginalValue(Keys.D9.ToString()))
+            {
+                letterPressed = "9";
             }
             return letterPressed;
         }
 
         private string ReturnNoteLetterPressed(KeyEventArgs e, bool usePianoKeysForNotes)
         {
+            string keyCode = e.KeyCode.ToString();
             string letterPressed = "";
 
-            switch (e.KeyCode)
+            if (keyCode == KeysMapped.GetEditedValueByOriginalValue(Keys.A.ToString()))
             {
-                case Keys.A:
-                    {
-                        letterPressed = "A";
-                        break;
-                    }
-                case Keys.B:
-                    {
-                        letterPressed = usePianoKeysForNotes ? "G" : "B";
-                        break;
-                    }
-                case Keys.C:
-                    {
-                        letterPressed = usePianoKeysForNotes ? "E" : "C";
-                        break;
-                    }
-                case Keys.D:
-                    {
-                        letterPressed = "D";
-                        break;
-                    }
-                case Keys.E:
-                    {
-                        letterPressed = "E";
-                        break;
-                    }
-                case Keys.F:
-                    {
-                        letterPressed = "F";
-                        break;
-                    }
-                case Keys.G:
-                    {
-                        letterPressed = "G";
-                        break;
-                    }
-                case Keys.M:
-                    {
-                        letterPressed = usePianoKeysForNotes ? "H" : "";
-                        break;
-                    }
-                case Keys.N:
-                    {
-                        letterPressed = usePianoKeysForNotes ? "A" : "";
-                        break;
-                    }
-                case Keys.V:
-                    {
-                        letterPressed = usePianoKeysForNotes ? "F" : "";
-                        break;
-                    }
-                case Keys.X:
-                    {
-                        letterPressed = usePianoKeysForNotes ? "D" : "";
-                        break;
-                    }
-                case Keys.Z:
-                    {
-                        letterPressed = usePianoKeysForNotes ? "C" : "";
-                        break;
-                    }
+                letterPressed = "A";
+            }
+            else if (keyCode == KeysMapped.GetEditedValueByOriginalValue(Keys.B.ToString()))
+            {
+                letterPressed = usePianoKeysForNotes ? "G" : "B";
+            }
+            else if (keyCode == KeysMapped.GetEditedValueByOriginalValue(Keys.C.ToString()))
+            {
+                letterPressed = usePianoKeysForNotes ? "E" : "C";
+            }
+            else if (keyCode == KeysMapped.GetEditedValueByOriginalValue(Keys.D.ToString()))
+            {
+                letterPressed = "D";
+            }
+            else if (keyCode == KeysMapped.GetEditedValueByOriginalValue(Keys.E.ToString()))
+            {
+                letterPressed = "E";
+            }
+            else if (keyCode == KeysMapped.GetEditedValueByOriginalValue(Keys.F.ToString()))
+            {
+                letterPressed = "F";
+            }
+            else if (keyCode == KeysMapped.GetEditedValueByOriginalValue(Keys.G.ToString()))
+            {
+                letterPressed = "G";
+            }
+            else if (keyCode == KeysMapped.GetEditedValueByOriginalValue(Keys.M.ToString()))
+            {
+                letterPressed = usePianoKeysForNotes ? "H" : "";
+            }
+            else if (keyCode == KeysMapped.GetEditedValueByOriginalValue(Keys.N.ToString()))
+            {
+                letterPressed = usePianoKeysForNotes ? "A" : "";
+            }
+            else if (keyCode == KeysMapped.GetEditedValueByOriginalValue(Keys.V.ToString()))
+            {
+                letterPressed = usePianoKeysForNotes ? "F" : "";
+            }
+            else if (keyCode == KeysMapped.GetEditedValueByOriginalValue(Keys.X.ToString()))
+            {
+                letterPressed = usePianoKeysForNotes ? "D" : "";
+            }
+            else if (keyCode == KeysMapped.GetEditedValueByOriginalValue(Keys.Z.ToString()))
+            {
+                letterPressed = usePianoKeysForNotes ? "C" : "";
             }
             return letterPressed;
         }
 
         private string ReturnHexCodePressed(KeyEventArgs e)
         {
+            string keyCode = e.KeyCode.ToString();
             string hexCodePressed = "";
 
             hexCodePressed = ReturnNumberPressed(e);
 
             if (hexCodePressed == "")
             {
-                switch (e.KeyCode)
+                if (keyCode == KeysMapped.GetEditedValueByOriginalValue(Keys.A.ToString()))
                 {
-                    case Keys.A:
-                        {
-                            hexCodePressed = "A";
-                            break;
-                        }
-                    case Keys.B:
-                        {
-                            hexCodePressed = "B";
-                            break;
-                        }
-                    case Keys.C:
-                        {
-                            hexCodePressed = "C";
-                            break;
-                        }
-                    case Keys.D:
-                        {
-                            hexCodePressed = "D";
-                            break;
-                        }
-                    case Keys.E:
-                        {
-                            hexCodePressed = "E";
-                            break;
-                        }
-                    case Keys.F:
-                        {
-                            hexCodePressed = "F";
-                            break;
-                        }
+                    hexCodePressed = "A";
+                }
+                else if (keyCode == KeysMapped.GetEditedValueByOriginalValue(Keys.B.ToString()))
+                {
+                    hexCodePressed = "B";
+                }
+                else if (keyCode == KeysMapped.GetEditedValueByOriginalValue(Keys.C.ToString()))
+                {
+                    hexCodePressed = "C";
+                }
+                else if (keyCode == KeysMapped.GetEditedValueByOriginalValue(Keys.D.ToString()))
+                {
+                    hexCodePressed = "D";
+                }
+                else if (keyCode == KeysMapped.GetEditedValueByOriginalValue(Keys.E.ToString()))
+                {
+                    hexCodePressed = "E";
+                }
+                else if (keyCode == KeysMapped.GetEditedValueByOriginalValue(Keys.F.ToString()))
+                {
+                    hexCodePressed = "F";
                 }
             }
             return hexCodePressed;
@@ -1510,13 +1477,13 @@ namespace Mega_Music_Editor.Unique
         {
             string letterPressed = "";
 
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Enter.ToString()))
             {
                 futureCellValue = "00";
                 e.Handled = true; // So normal Enter function isn't executed
                 return true;
             }
-            else if (e.KeyCode == Keys.Delete)
+            else if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Delete.ToString()))
             {
                 futureCellValue = futureCellValueIfDeleted;
                 e.Handled = true; // So normal Enter function isn't executed
@@ -1555,13 +1522,13 @@ namespace Mega_Music_Editor.Unique
         {
             string digitPressed = "";
 
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Enter.ToString()))
             {
                 futureCellValue = "00000";
                 e.Handled = true; // So normal Enter function isn't executed
                 return true;
             }
-            else if (e.KeyCode == Keys.Delete)
+            else if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Delete.ToString()))
             {
                 futureCellValue = futureCellValueIfDeleted;
                 e.Handled = true; // So normal Enter function isn't executed
@@ -1592,15 +1559,15 @@ namespace Mega_Music_Editor.Unique
 
             var dgvCurrentCell = currentDgv.SelectedCells[0];
 
-            if (e.KeyCode == Keys.P)
-            {
+            if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.P.ToString()))
+                {
                 if (dgvCurrentCell.RowIndex - 4 < 0)
                     currentDgv.CurrentCell = currentDgv.Rows[0].Cells[dgvCurrentCell.ColumnIndex];
                 else
                     currentDgv.CurrentCell = currentDgv.Rows[dgvCurrentCell.RowIndex - 4].Cells[dgvCurrentCell.ColumnIndex];
             }
-            if (e.KeyCode == Keys.L)
-            {
+            if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.L.ToString()))
+                {
                 if (dgvCurrentCell.RowIndex + 4 < currentDgv.RowCount)
                     currentDgv.CurrentCell = currentDgv.Rows[dgvCurrentCell.RowIndex + 4].Cells[dgvCurrentCell.ColumnIndex];
                 else if (dgvCurrentCell.RowIndex + 3 < currentDgv.RowCount)
@@ -1683,7 +1650,7 @@ namespace Mega_Music_Editor.Unique
             if (dgvLoop.RowCount == 0) return;
 
             // If delete, we delete content of all the cells
-            if (e.KeyCode == Keys.Delete)
+            if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Delete.ToString()))
             {
                 qtyCellsToEdit = dgvLoop.SelectedCells.Count;
             }
@@ -1788,7 +1755,7 @@ namespace Mega_Music_Editor.Unique
             if (dgvBreak.RowCount == 0) return;
 
             // If delete, we delete content of all the cells
-            if (e.KeyCode == Keys.Delete)
+            if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Delete.ToString()))
             {
                 qtyCellsToEdit = dgvBreak.SelectedCells.Count;
             }
@@ -1867,7 +1834,7 @@ namespace Mega_Music_Editor.Unique
 
         private void SetFlagValue(KeyEventArgs e, ref string cellValue, string futureCellValueIfDeleted)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Enter.ToString()))
             {
                 Form frmFlag = new FrmFlag();
 
@@ -1879,7 +1846,7 @@ namespace Mega_Music_Editor.Unique
 
                 e.Handled = true; // So normal Enter function isn't executed
             }
-            else if (e.KeyCode == Keys.Delete)
+            else if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Delete.ToString()))
             {
                 cellValue = futureCellValueIfDeleted;
                 e.Handled = true; // So normal Enter function isn't executed
@@ -1894,7 +1861,7 @@ namespace Mega_Music_Editor.Unique
             if (dgvMusic.RowCount == 0) return;
 
             // If delete, we delete content of all the cells
-            if (e.KeyCode == Keys.Delete)
+            if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Delete.ToString()))
             {
                 qtyCellsToEdit = dgvMusic.SelectedCells.Count;
             }
@@ -1923,24 +1890,24 @@ namespace Mega_Music_Editor.Unique
                     nullValueForInstruction = GetMusicEngineInstructionsDatas.GetDatasByInstructionName(MusicEngineFixedInstructionsDatas.Names.Note)._ColumnDefaultValue;
                     if (isNoiseChannel)
                     {
-                        if (e.KeyCode == Keys.Enter)
+                        if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Enter.ToString()))
                         {
                             futureCellValue = "0-#";
                             e.Handled = true; // So normal Enter function isn't executed
                         }
-                        else if (e.KeyCode == Keys.Space)
+                        else if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Space.ToString()))
                         {
                             futureCellValue = MusicEngineFixedNotesDatas.Names.NesA.Delay;
 
                             e.Handled = true; // So normal Enter function isn't executed
                         }
-                        else if (e.KeyCode == Keys.Insert)
+                        else if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Insert.ToString()))
                         {
                             futureCellValue = MusicEngineFixedNotesDatas.Names.NesA.Skip;
 
                             e.Handled = true; // So normal Enter function isn't executed
                         }
-                        else if (e.KeyCode == Keys.Delete)
+                        else if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Delete.ToString()))
                         {
                             futureCellValue = GetMusicEngineInstructionsDatas.GetDatasByInstructionName(MusicEngineFixedInstructionsDatas.Names.Note)._ColumnDefaultValue;
 
@@ -1986,24 +1953,24 @@ namespace Mega_Music_Editor.Unique
                     }
                     else
                     {
-                        if (e.KeyCode == Keys.Enter)
+                        if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Enter.ToString()))
                         {
                             futureCellValue = "C-0";
                             e.Handled = true; // So normal Enter function isn't executed
                         }
-                        else if (e.KeyCode == Keys.Space)
+                        else if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Space.ToString()))
                         {
                             futureCellValue = MusicEngineFixedNotesDatas.Names.NesA.Delay;
 
                             e.Handled = true; // So normal Enter function isn't executed
                         }
-                        else if (e.KeyCode == Keys.Insert)
+                        else if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Insert.ToString()))
                         {
                             futureCellValue = MusicEngineFixedNotesDatas.Names.NesA.Skip;
 
                             e.Handled = true; // So normal Enter function isn't executed
                         }
-                        else if (e.KeyCode == Keys.Delete)
+                        else if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Delete.ToString()))
                         {
                             futureCellValue = GetMusicEngineInstructionsDatas.GetDatasByInstructionName(MusicEngineFixedInstructionsDatas.Names.Note)._ColumnDefaultValue;
 
@@ -2033,7 +2000,7 @@ namespace Mega_Music_Editor.Unique
                                     }
                                     else
                                     {
-                                        if (e.KeyCode == Keys.Oem7 || e.KeyCode == Keys.S)
+                                        if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Oem7.ToString()) || e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.S.ToString()))
                                         {
                                             if (cellValue.Substring(1, 1) == "#")
                                             {
@@ -2046,7 +2013,7 @@ namespace Mega_Music_Editor.Unique
 
                                             e.Handled = true; // So normal Enter function isn't executed
                                         }
-                                        else if (e.KeyCode == Keys.OemMinus || e.KeyCode == Keys.M)
+                                        else if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.OemMinus.ToString()) || e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.M.ToString()))
                                         {
                                             if (cellValue.Substring(1, 1) == "#")
                                             {
@@ -2157,7 +2124,7 @@ namespace Mega_Music_Editor.Unique
                 }
                 else if ((dgvMusicCurrentCell.ColumnIndex) == ColumnsPosition.NesA.ToneType + columnOffset)
                 {
-                    if (e.KeyCode == Keys.Enter)
+                    if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Enter.ToString()))
                     {
                         if (cellValue == GetMusicEngineInstructionsDatas.GetDatasByInstructionName(MusicEngineFixedInstructionsDatas.Names.ToneType)._ColumnDefaultValue)
                         {
@@ -2185,7 +2152,7 @@ namespace Mega_Music_Editor.Unique
                         }
                         e.Handled = true; // So normal Enter function isn't executed
                     }
-                    else if (e.KeyCode == Keys.Delete)
+                    else if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Delete.ToString()))
                     {
                         dgvMusicCurrentCell.Value = GetMusicEngineInstructionsDatas.GetDatasByInstructionName(MusicEngineFixedInstructionsDatas.Names.ToneType)._ColumnDefaultValue;
                         e.Handled = true; // So normal Enter function isn't executed
@@ -2208,11 +2175,11 @@ namespace Mega_Music_Editor.Unique
                     futureCellValueIfDeleted = ColumnsEmptyValue.symbolRequiredForEmptyCells;
                     if (ReturnValueForNumericSlot(e, ref cellValue, ref futureCellValue, new Hex("FF"), futureCellValueIfDeleted))
                         dgvMusicCurrentCell.Value = futureCellValue;
-                    if (e.KeyCode == Keys.Enter)
+                    if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Enter.ToString()))
                     {
                         dgvMusic[dgvMusicCurrentCell.ColumnIndex + 1, dgvMusicCurrentCell.RowIndex].Value = "00";
                     }
-                    else if (e.KeyCode == Keys.Delete)
+                    else if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Delete.ToString()))
                     {
                         dgvMusic[dgvMusicCurrentCell.ColumnIndex + 1, dgvMusicCurrentCell.RowIndex].Value = null;
 
@@ -2231,12 +2198,12 @@ namespace Mega_Music_Editor.Unique
                     futureCellValueIfDeleted = ColumnsEmptyValue.symbolRequiredForEmptyCells;
                     if (ReturnValueForNumericSlot(e, ref cellValue, ref futureCellValue, new Hex("FF"), futureCellValueIfDeleted))
                         dgvMusicCurrentCell.Value = futureCellValue;
-                    if (e.KeyCode == Keys.Enter)
+                    if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Enter.ToString()))
                     {
                         dgvMusic[dgvMusicCurrentCell.ColumnIndex - 1, dgvMusicCurrentCell.RowIndex].Value = "00";
 
                     }
-                    else if (e.KeyCode == Keys.Delete)
+                    else if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Delete.ToString()))
                     {
                         splitter = GetMusicEngineInstructionsDatas.GetDatasByInstructionName(MusicEngineFixedInstructionsDatas.Names.Speed)._ColumnDefaultValue;
 
@@ -2250,12 +2217,12 @@ namespace Mega_Music_Editor.Unique
                 }
                 else if ((dgvMusicCurrentCell.ColumnIndex) == ColumnsPosition.NesA.OctavePlus + columnOffset)
                 {
-                    if (e.KeyCode == Keys.Enter)
+                    if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Enter.ToString()))
                     {
                         dgvMusicCurrentCell.Value = "TOG";
                         e.Handled = true; // So normal Enter function isn't executed
                     }
-                    else if (e.KeyCode == Keys.Delete)
+                    else if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Delete.ToString()))
                     {
                         dgvMusicCurrentCell.Value = GetMusicEngineInstructionsDatas.GetDatasByInstructionName(MusicEngineFixedInstructionsDatas.Names.OctavePlus)._ColumnDefaultValue;
                         e.Handled = true; // So normal Enter function isn't executed
@@ -2263,12 +2230,12 @@ namespace Mega_Music_Editor.Unique
                 }
                 else if ((dgvMusicCurrentCell.ColumnIndex) == ColumnsPosition.NesA.Connect + columnOffset)
                 {
-                    if (e.KeyCode == Keys.Enter)
+                    if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Enter.ToString()))
                     {
                         dgvMusicCurrentCell.Value = "TOG";
                         e.Handled = true; // So normal Enter function isn't executed
                     }
-                    else if (e.KeyCode == Keys.Delete)
+                    else if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Delete.ToString()))
                     {
                         dgvMusicCurrentCell.Value = GetMusicEngineInstructionsDatas.GetDatasByInstructionName(MusicEngineFixedInstructionsDatas.Names.Connect)._ColumnDefaultValue;
                         e.Handled = true; // So normal Enter function isn't executed
@@ -2276,12 +2243,12 @@ namespace Mega_Music_Editor.Unique
                 }
                 else if ((dgvMusicCurrentCell.ColumnIndex) == ColumnsPosition.NesA.Triplet + columnOffset)
                 {
-                    if (e.KeyCode == Keys.Enter)
+                    if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Enter.ToString()))
                     {
                         dgvMusicCurrentCell.Value = "TOG";
                         e.Handled = true; // So normal Enter function isn't executed
                     }
-                    else if (e.KeyCode == Keys.Delete)
+                    else if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Delete.ToString()))
                     {
                         dgvMusicCurrentCell.Value = GetMusicEngineInstructionsDatas.GetDatasByInstructionName(MusicEngineFixedInstructionsDatas.Names.Triplet)._ColumnDefaultValue;
                         e.Handled = true; // So normal Enter function isn't executed
@@ -2292,11 +2259,11 @@ namespace Mega_Music_Editor.Unique
                     futureCellValueIfDeleted = ColumnsEmptyValue.symbolRequiredForEmptyCells;
                     if (ReturnValueForNumericSlot(e, ref cellValue, ref futureCellValue, new Hex("FF"), futureCellValueIfDeleted))
                         dgvMusicCurrentCell.Value = futureCellValue;
-                    if (e.KeyCode == Keys.Enter)
+                    if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Enter.ToString()))
                     {
                         dgvMusic[dgvMusicCurrentCell.ColumnIndex + 1, dgvMusicCurrentCell.RowIndex].Value = "00";
                     }
-                    else if (e.KeyCode == Keys.Delete)
+                    else if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Delete.ToString()))
                     {
                         dgvMusic[dgvMusicCurrentCell.ColumnIndex + 1, dgvMusicCurrentCell.RowIndex].Value = null;
 
@@ -2315,12 +2282,12 @@ namespace Mega_Music_Editor.Unique
                     futureCellValueIfDeleted = ColumnsEmptyValue.symbolRequiredForEmptyCells;
                     if (ReturnValueForNumericSlot(e, ref cellValue, ref futureCellValue, new Hex("FF"), futureCellValueIfDeleted))
                         dgvMusicCurrentCell.Value = futureCellValue;
-                    if (e.KeyCode == Keys.Enter)
+                    if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Enter.ToString()))
                     {
                         dgvMusic[dgvMusicCurrentCell.ColumnIndex - 1, dgvMusicCurrentCell.RowIndex].Value = "00";
 
                     }
-                    else if (e.KeyCode == Keys.Delete)
+                    else if (e.KeyCode.ToString() == KeysMapped.GetEditedValueByOriginalValue(Keys.Delete.ToString()))
                     {
                         splitter = GetMusicEngineInstructionsDatas.GetDatasByInstructionName(MusicEngineFixedInstructionsDatas.Names.SfxToggle)._ColumnDefaultValue;
 
